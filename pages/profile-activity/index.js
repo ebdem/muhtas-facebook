@@ -8,7 +8,7 @@ export default function NumberOfUsers() {
       children={
         <div className="descriptionChart">
           <p>
-            This chart shows us how many percent activism all accounts are used.
+            This chart shows us how many percent activity all accounts are used.
           </p>
           <ProfileActivityComponent />
         </div>
