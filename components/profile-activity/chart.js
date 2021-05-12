@@ -27,7 +27,7 @@ const ActivityChart = () => {
       content: {
         formatter: function formatter(_ref) {
           var percent = _ref.percent;
-          return "Profile Activity: ".concat((percent * 70).toFixed(0), "%");
+          return "Profile Activity: ".concat((percent * 100).toFixed(0), "%");
         },
       },
       style: { fontSize: 30 },
