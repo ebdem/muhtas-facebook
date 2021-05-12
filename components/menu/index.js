@@ -7,6 +7,11 @@ import {
   FileOutlined,
   TeamOutlined,
   UserOutlined,
+  FieldTimeOutlined,
+  ShrinkOutlined,
+  InteractionOutlined,
+  FundViewOutlined,
+  SmileOutlined,
 } from "@ant-design/icons";
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -26,29 +31,49 @@ export default function MenuBar({ children, title, ...rest }) {
         <Link href="/">
           <Image
             preview={false}
-            style={{ padding: "10px", cursor: "pointer" }}
-            width={200}
+            style={{
+              padding: "10px",
+              cursor: "pointer",
+              transitionDelay: "1s",
+              maxWidth: "100%",
+              height: "auto",
+            }}
             src="/1.svg"
           />
         </Link>
-        <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
+
+        <Menu theme="dark" mode="inline">
           <Menu.Item key="1" icon={<PieChartOutlined />}>
-            Main Page
+            <Link href="/">Landing Page</Link>
           </Menu.Item>
-          <Menu.Item key="2" icon={<DesktopOutlined />}>
-            Option 2
+          <SubMenu key="sub1" icon={<UserOutlined />} title="Users">
+            <Menu.Item key="2" icon={<TeamOutlined />}>
+              <Link href="/number-of-users">Number of users</Link>
+            </Menu.Item>
+            <Menu.Item key="11" icon={<FieldTimeOutlined />}>
+              <Link href="/number-of-users-by-years">Users by years</Link>
+            </Menu.Item>
+            <Menu.Item key="13" icon={<ShrinkOutlined />}>
+              <Link href="/age-of-users">Age of users</Link>
+            </Menu.Item>
+          </SubMenu>
+          <Menu.Item key="14" icon={<FundViewOutlined />}>
+            <Link href="/profile-activity">Profile activity</Link>
           </Menu.Item>
-          <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-            <Menu.Item key="3">Tom</Menu.Item>
-            <Menu.Item key="4">Bill</Menu.Item>
-            <Menu.Item key="5">Alex</Menu.Item>
+          <SubMenu
+            key="sub2"
+            icon={<InteractionOutlined />}
+            title="Interaction"
+          >
+            <Menu.Item key="6">
+              <Link href="/like">Like</Link>
+            </Menu.Item>
+            <Menu.Item key="8">
+              <Link href="/share-post">Post Share</Link>
+            </Menu.Item>
           </SubMenu>
-          <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-            <Menu.Item key="6">Team 1</Menu.Item>
-            <Menu.Item key="8">Team 2</Menu.Item>
-          </SubMenu>
-          <Menu.Item key="9" icon={<FileOutlined />}>
-            Files
+          <Menu.Item key="9" icon={<SmileOutlined />}>
+            <Link href="/satisfaction">Satisfaction</Link>
           </Menu.Item>
         </Menu>
       </Sider>
