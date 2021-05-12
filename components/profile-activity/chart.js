@@ -18,7 +18,7 @@ const ActivityChart = () => {
     axis: {
       label: {
         formatter: function formatter(v) {
-          return Number(v) * 70;
+          return Number(v) * 100;
         },
       },
       subTickLine: { count: 5 },
