@@ -18,3 +18,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+Or you can see my website
+[https://muhtas-analysis.netlify.app/](https://muhtas-analysis.netlify.app/)
+
